@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_game"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:onClick="home"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/back_sel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/frame"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/frame_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="60dp"
+        android:maxHeight="60dp"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/lilitaone_regular"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@id/frame"
+        app:layout_constraintTop_toTopOf="@id/frame"
+        app:layout_constraintBottom_toBottomOf="@+id/frame"
+        app:layout_constraintStart_toStartOf="@id/frame"/>
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="157dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/clothe"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="252dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/washing_machines"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/clotheFrame"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.382" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="362dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="601dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView5">
+        <ImageButton
+            android:id="@+id/greyBasket"
+            android:layout_width="114dp"
+            android:layout_height="150dp"
+            android:onClick="greyBasket"
+            android:background="@drawable/grey_basket"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:id="@+id/redBasket"
+            android:layout_width="114dp"
+            android:layout_height="150dp"
+            android:onClick="redBasket"
+            android:background="@drawable/red_basket"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:id="@+id/blackBasket"
+            android:layout_width="114dp"
+            android:layout_height="150dp"
+            android:onClick="blackBasket"
+            android:background="@drawable/black_basket"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
